@@ -1,0 +1,6 @@
+https://purdueuniversity.maps.arcgis.com/apps/MapSeries/index.html?appid=2995787cb9cb41c6afc6b98d76560bec
+
+
+https://engineering.purdue.edu/mapserve/ldc/
+
+http://buckeye.agriculture.purdue.edu:8080/geoserver/coefs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=coefs:HUC12_calib&outputFormat=SHAPE-ZIP

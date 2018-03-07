@@ -1,0 +1,23 @@
+
+The purpose of the WQ Calibration project was to use a regression-based approach to create a series of reduction coefficients that describe the pollution contribution of surface and baseflow water to a watershed-scale system. Typical water quality models apply a coefficient sometimes called an Event Mean Concentration (EMC) to the volume of surface runoff computed to occur; however this project was designed to estimate and then use an EMC predict the baseflow contribution. 
+The assumption is then that baseflow is not pure rainwater, the landuse through which it infiltrates into groundwater has a pollution effect. The effort to compute an EMC for the baseflow is a method to include this contribution into a calculation of Total Load for the watershed. This approach necessitates separating the flow data for the water body into baseflow and surface flow. 
+The project used the WHAT software tool for that, an online flow separation program available from Purdue. 
+
+
+A goal of the project was to create a REST service of calibration coefficients that could be used by water quality models. The typical use of these coefficients would be to adjust the Event Mean Concentration (EMC) values for the watershed, away from national published values and toward the local calibration value. See the Indiana tab for more details.
+ 
+This project was funded by the US EPA as project 83545401 Connecting Multiple Web-Based Decision Support Tools to EN Data Flows
+ 
+Purdue University has created water quality models and tools which have been integrated into online decision support tools. These tools have been widely used worldwide to assess the impacts of upland activities on water resources in terms of nonpoint source (NPS) pollution.
+ 
+Estimation of NPS pollution with several of these tools, at a fundamental level, is based on pollutant coefficients. Pollutant coefficients serve as a measure for quantifying levels of contaminating substances such as sediment, nitrogen, phosphorus, among others, resulting from different land use management activities. 
+ 
+They are used to gain understanding of the effectiveness of watershed management strategies.The coefficients are based on observational data including water quality measurements, which are processed through equations to derive a relationship.
+ 
+This project was designed to connect exchange network data to a pair of online decision support tools through a mechanism that consumes Exchange Network and USGS water quality measurements (from the Water Quality Portal) and USGS streamflow data to produce relevant coefficients used in common by many water quality models.
+ 
+The production of the coefficients allows creation of a web service that will expose these coefficients for consumption by other models beyond the ones at Purdue University.
+ 
+In this project, watersheds which were calibrated are displayed as HUC 12 polygons with the appropriate coefficients embedded in the attribute table. Download the map layer or connect to the REST service to view the coefficients.
+After organization of data within a GIS, the analysis used WHAT streamflow separation software to determine baseflow-dominated watersheds, our load duration curve software, LOADEST (USGS) for daily load computation, and regression software.
+A typical example of the work is below. Results for each state follow. 

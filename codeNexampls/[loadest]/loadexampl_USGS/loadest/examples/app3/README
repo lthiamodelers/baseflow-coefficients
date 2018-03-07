@@ -1,0 +1,23 @@
+
+README file for Application 3 Data Set
+--------------------------------------
+
+Section 4 of the LOADEST user documentation reads, in part:
+
+"Note that the observed data used in the applications are for 
+demonstration purposes only; individual data sets may not have
+been checked for accuracy and compliance with USGS quality
+assurance guidelines. Also note that the description of results
+provided for each application is intentionally limited, and a
+complete description of the statistical aspects associated 
+with a given problem is beyond the scope of this report."
+
+This statement is especially true for Application 3 that utilizes
+data from the Potomac River at Little Falls/Chain Bridge.  The
+calibration data set included herein has multiple observations of
+orthophosphate concentration that are equal to 0.2511 mg/L.  These 
+observations are not present in the USGS NWIS database and their
+origin is unknown.  The data should therefore be viewed as "for
+demonstration purposes only".
+
+R.L. Runkel, 28 December 2004

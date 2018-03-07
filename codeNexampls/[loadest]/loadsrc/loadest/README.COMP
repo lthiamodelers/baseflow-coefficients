@@ -1,0 +1,105 @@
+  LOADEST: A software program for estimating constituent loads
+  ------------------------------------------------------------
+  Version: MOD48                                March 2013
+  
+  LOADEST is a program to estimate constituent loads by the rating
+  curve method.  Daily or unit streamflow data are used with the
+  rating curve to obtain the estimated loads.
+
+  LOADEST and related materials are made available by the U.S.
+  Geological Survey (USGS) to be used in the public interest and the
+  advancement of science. You may, without any fee or cost, use, copy,
+  modify, or distribute this software, and any derivative works thereof,
+  and its supporting documentation, SUBJECT TO the USGS software User's
+  Rights Notice, http://water.usgs.gov/software/software_notice.html
+
+---------------------------------------------------------------------------
+
+  Compilation Instructions
+  ------------------------
+  Executable binaries of LOADEST are available for a number of hardware
+  platforms and operating systems.  As a result, compilation of the
+  source code may not be required.  Compilation is required in the
+  following situations:
+
+  a) Executable binaries are not available for your specific hardware
+    platform/operating system.
+
+  b) The dimensions of the modeled system exceed the maximum dimensions
+    specified in the include files (fmodules.inc).  As of March 2013
+    (MOD48), most program variables are dynamically allocated, and most
+    of the maximum dimensions shown in Table 25 of the software
+    documentation (Runkel et al., 2004) no longer apply. As such, this
+    situation is unlikely to arise.
+
+  c) Modifications have been made to the underlying computer code.
+
+
+  *********************************************************************
+  Note:  The instructions below were originally written for compilation
+  of LOADEST under Unix (& Linux).  These instructions for compilation
+  may work under Windows if the compiler supports makefiles (e.g. the
+  Portland Group Fortran compiler for Win32).
+  *********************************************************************
+
+  The makefiles used to compile LOADEST are configured to invoke gfortran
+  with no command line options.  Users requiring other compilers and command
+  line options will need to override the default configuration as described
+  in base-directory/loadest/source/makefile.  LOADEST may be compiled as
+  follows:
+
+   (1) Modify the include files (optional).  Changes to the maximum dimensions
+    or logical device assignments may be made by editing the include files
+    described in Section 5.5.2 of the software documentation.
+
+   (2) From the base-directory/loadest/source directory, enter:
+
+	make
+
+  When compilation is complete, the loadest executable will reside in
+  base-directory/loadest/.
+
+
+  A note on machine constants
+  ---------------------------
+  Several hardware-specific machine constants are set in the d1mach
+  subroutine.  Users compiling for personal computers should use the
+  d1mach subroutine contained in d1mach.f; users compiling for SPARC
+  workstations should modify the d1mach subroutine.
+
+  The gory details are shown below.
+
+  For the Pentium PCs, the machine constants should be set as follows:
+
+C
+C     MACHINE CONSTANTS FOR IEEE ARITHMETIC MACHINES AND 8087-BASED
+C     MICROS, SUCH AS THE IBM PC AND AT&T 6300, IN WHICH THE LEAST
+C     SIGNIFICANT BYTE IS STORED FIRST.
+C
+      DATA SMALL(1),SMALL(2) /          0,    1048576 /
+      DATA LARGE(1),LARGE(2) /         -1, 2146435071 /
+      DATA RIGHT(1),RIGHT(2) /          0, 1017118720 /
+      DATA DIVER(1),DIVER(2) /          0, 1018167296 /
+      DATA LOG10(1),LOG10(2) / 1352628735, 1070810131 /
+
+---------------------------------------------------------------------------
+
+  Reference
+  ---------
+  Runkel, R.L., C.G. Crawford, and T.A. Cohn, 2004, Load Estimator
+    (LOADEST): A FORTRAN Program for Estimating Constituent Loads in
+    Streams and Rivers, U.S. Geological Survey Techniques and
+    Methods, Book 4, Chapter A5, 75 p.
+
+  Homepage:  http://water.usgs.gov/software/loadest/
+
+
+  Correspondence
+  --------------
+  Robert L. Runkel
+  U.S. Geological Survey
+  3215 Marine Street, Suite E-127
+  Boulder, CO 80303
+
+  email: runkel@usgs.gov
+  https://profile.usgs.gov/runkel

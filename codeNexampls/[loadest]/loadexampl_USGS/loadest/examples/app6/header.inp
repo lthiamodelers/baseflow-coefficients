@@ -1,0 +1,51 @@
+######################################################################
+#
+#  LOADEST Header File
+#
+#  Little Arkansas River near Halstead KS (Station # 07143672)
+#
+#  Obtained from Vicki Christensen, 26 September 2003
+#
+######################################################################
+Little Arkansas R. nr Halstead KS (Station # 07143672), Alkalinity
+1             |     PRTOPT (col.1-5)
+3             |     SEOPT (col.1-5)
+2             |     LDOPT (col. 1-5)
+###########################################################
+#
+# model number, MODNO (col.1-5)
+#
+###########################################################
+99
+###########################################################
+#
+# setup user defined model (MODNO = 99 only)
+#
+# number of additional data variables (NADDL),
+# number of explanatory variables (NEXPL) and definitions
+# for explanatory variables (DVNAME,TRANS)
+#   
+###########################################################
+2             | NADDL (col.1-5)
+2             | NEXPL (col.1-5)
+#
+#DVNAM     TRANS   (I=1,NEXPL) 
+###########################################################
+ADDL1      LN
+ADDL2      LN
+###########################################################
+#
+# number of constituents, NCONST (col.1-5)
+#
+###########################################################
+1
+###########################################################
+#
+#  Unit flags and constituent names
+# 
+#                    for I = 1, NCONST
+#                                            Unit Flags   
+#CNAME                                       Conc Load
+#                                            |    |
+###########################################################
+alkalinity                                   1    1

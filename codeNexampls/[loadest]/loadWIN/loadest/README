@@ -1,0 +1,38 @@
+
+
+  LOADEST: A software program for estimating constituent loads
+  ------------------------------------------------------------
+  Version: MOD48                                March 2013
+  
+  LOADEST is a program to estimate constituent loads by the rating
+  curve method.  Daily or unit streamflow data are used with the
+  rating curve to obtain the estimated loads.
+
+  LOADEST and related materials are made available by the U.S.
+  Geological Survey (USGS) to be used in the public interest and the
+  advancement of science. You may, without any fee or cost, use, copy,
+  modify, or distribute this software, and any derivative works thereof,
+  and its supporting documentation, SUBJECT TO the USGS software User's
+  Rights Notice, http://water.usgs.gov/software/software_notice.html
+
+---------------------------------------------------------------------------
+
+  Reference
+  ---------
+  Runkel, R.L., C.G. Crawford, and T.A. Cohn, 2004, Load Estimator
+    (LOADEST): A FORTRAN Program for Estimating Constituent Loads in
+    Streams and Rivers, U.S. Geological Survey Techniques and
+    Methods, Book 4, Chapter A5, 75 p.
+
+  Homepage:  http://water.usgs.gov/software/loadest/
+
+
+  Correspondence
+  --------------
+  Robert L. Runkel
+  U.S. Geological Survey
+  3215 Marine Street, Suite E-127
+  Boulder, CO 80303
+
+  email: runkel@usgs.gov
+  https://profile.usgs.gov/runkel
